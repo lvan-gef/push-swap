@@ -4,3 +4,4 @@ obj/
 push_swap
 bonus_obj/
 checker
+infer-out/
