@@ -6,7 +6,7 @@
 /*   By: lvan-gef <lvan-gef@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/05/16 13:47:20 by lvan-gef      #+#    #+#                 */
-/*   Updated: 2023/05/16 13:47:22 by lvan-gef      ########   odam.nl         */
+/*   Updated: 2024/05/06 01:38:32 by lvan-gef      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,6 +92,8 @@ void	bucket_sort(t_node **head_a, t_node **head_b)
 		bucket_size += chunk;
 		counter++;
 	}
+	while (ll_len(*head_a) < 3)
+		push_highest(head_a, head_b);
 	while (ll_len(*head_a) > 3)
 		push_lowest(head_a, head_b);
 	sort_three(head_a);
