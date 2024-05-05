@@ -2,3 +2,5 @@
 compile_commands.json
 obj/
 push_swap
+bonus_obj/
+checker
