@@ -6,7 +6,7 @@
 /*   By: lvan-gef <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/05/16 14:47:20 by lvan-gef      #+#    #+#                 */
-/*   Updated: 2024/05/06 02:27:20 by lvan-gef      ########   odam.nl         */
+/*   Updated: 2024/05/06 02:45:17 by lvan-gef      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void		create_node(t_node **head, int nbr);
 int			ll_len(t_node *head);
 
 // ll_cmd_bonus.c
-void		create_cmd(t_command **cmds, t_node **head, char *cmd);
+void		create_cmd(t_command **cmds, t_node **head, const char *cmd);
 
 // push_bonus.c
 void		pa(t_node **head_a, t_node **head_b);
@@ -88,7 +88,7 @@ int			arr_len(char **arr);
 bool		is_sorted(t_node *head);
 
 // valid_numbers_bonus.c
-bool		is_number(char *str);
+bool		is_number(const char *str);
 bool		in_bound(long int nbr);
 
 #endif

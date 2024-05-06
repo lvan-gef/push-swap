@@ -6,14 +6,14 @@
 /*   By: lvan-gef <lvan-gef@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/05/16 14:14:43 by lvan-gef      #+#    #+#                 */
-/*   Updated: 2023/05/16 14:14:44 by lvan-gef      ########   odam.nl         */
+/*   Updated: 2024/05/06 02:45:00 by lvan-gef      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap_bonus.h"
 
 static	bool	check_a(t_node **head_a, t_node **head_b,
-		char *cmd, size_t str_len)
+		const char *cmd, size_t str_len)
 {
 	if (!ft_strncmp(cmd, "sa\n", str_len))
 	{
@@ -39,7 +39,7 @@ static	bool	check_a(t_node **head_a, t_node **head_b,
 }
 
 static	bool	check_b(t_node **head_a, t_node **head_b,
-		char *cmd, size_t str_len)
+		const char *cmd, size_t str_len)
 {
 	if (!ft_strncmp(cmd, "sb\n", str_len))
 	{
@@ -65,7 +65,7 @@ static	bool	check_b(t_node **head_a, t_node **head_b,
 }
 
 static	bool	check_x(t_node **head_a, t_node **head_b,
-		char *cmd, size_t str_len)
+		const char *cmd, size_t str_len)
 {
 	if (!ft_strncmp(cmd, "ss\n", str_len))
 	{

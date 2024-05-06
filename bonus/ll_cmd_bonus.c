@@ -6,7 +6,7 @@
 /*   By: lvan-gef <lvan-gef@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/05/16 14:06:27 by lvan-gef      #+#    #+#                 */
-/*   Updated: 2024/05/06 02:32:58 by lvan-gef      ########   odam.nl         */
+/*   Updated: 2024/05/06 02:44:04 by lvan-gef      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static	void	add_node(t_command **cmds, t_command *cmd)
 	}
 }
 
-void	create_cmd(t_command **cmds, t_node **head, char *cmd)
+void	create_cmd(t_command **cmds, t_node **head, const char *cmd)
 {
 	t_command	*new;
 	size_t		str_len;
