@@ -3,7 +3,7 @@
 /*                                                        ::::::::            */
 /*   push_swap_bonus.h                                  :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: lvan-gef <marvin@codam.nl>                   +#+                     */
+/*   By: lvan-gef <lvan-gef@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/05/16 14:47:20 by lvan-gef      #+#    #+#                 */
 /*   Updated: 2024/05/06 02:45:17 by lvan-gef      ########   odam.nl         */
