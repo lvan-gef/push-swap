@@ -6,13 +6,13 @@
 /*   By: lvan-gef <lvan-gef@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/05/16 13:49:10 by lvan-gef      #+#    #+#                 */
-/*   Updated: 2024/05/06 02:14:57 by lvan-gef      ########   odam.nl         */
+/*   Updated: 2024/05/06 02:23:53 by lvan-gef      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-bool	is_number(char *str)
+bool	is_number(const char *str)
 {
 	size_t	i;
 	size_t	str_len;
