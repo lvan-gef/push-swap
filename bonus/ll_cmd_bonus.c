@@ -6,7 +6,7 @@
 /*   By: lvan-gef <lvan-gef@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/05/16 14:06:27 by lvan-gef      #+#    #+#                 */
-/*   Updated: 2023/05/16 14:06:29 by lvan-gef      ########   odam.nl         */
+/*   Updated: 2024/05/06 02:32:58 by lvan-gef      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,10 @@ void	create_cmd(t_command **cmds, t_node **head, char *cmd)
 		str_len = ft_strlen(cmd);
 		new->cmd = ft_calloc(str_len + 1, sizeof(char));
 		if (new->cmd == NULL)
+		{
+			free(new);
 			create_cmd_error(cmds, head);
+		}
 		else
 		{
 			ft_strlcpy(new->cmd, cmd, str_len + 1);
