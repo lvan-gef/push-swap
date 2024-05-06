@@ -6,7 +6,7 @@
 /*   By: lvan-gef <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/05/16 19:30:29 by lvan-gef      #+#    #+#                 */
-/*   Updated: 2024/05/06 01:27:51 by lvan-gef      ########   odam.nl         */
+/*   Updated: 2024/05/06 02:17:10 by lvan-gef      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,8 +86,7 @@ int			arr_len(char **arr);
 bool		is_sorted(t_node *head);
 
 // valid_numbers.c
-long int	ft_atoli(char *str);
-bool		is_number(char *str);
+bool		is_number(const char *str);
 bool		in_bound(long int nbr);
 
 #endif
