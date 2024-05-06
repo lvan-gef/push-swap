@@ -3,7 +3,7 @@
 /*                                                        ::::::::            */
 /*   handle_exit_bonus.c                                :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: lvan-gef <marvin@codam.nl>                   +#+                     */
+/*   By: lvan-gef <lvan-gef@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/05/17 18:21:50 by lvan-gef      #+#    #+#                 */
 /*   Updated: 2023/05/17 18:21:54 by lvan-gef      ########   odam.nl         */
