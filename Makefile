@@ -1,7 +1,7 @@
 NAME = push_swap
 B_NAME = checker
 
-CC = gcc
+CC = cc
 GFLAGS = -Wall -Werror -Wextra
 
 SRCDIR = src/
