@@ -6,7 +6,7 @@
 /*   By: lvan-gef <lvan-gef@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/05/16 14:00:50 by lvan-gef      #+#    #+#                 */
-/*   Updated: 2023/05/16 14:00:52 by lvan-gef      ########   odam.nl         */
+/*   Updated: 2024/05/06 02:37:12 by lvan-gef      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	push_node(t_node **head, t_node *node)
 {
+	if (node == NULL)
+		return ;
 	node->next = *head;
 	if (*head == NULL)
 		*head = node;
