@@ -64,7 +64,7 @@ def decimal_test(ps_exe: Path):
         assert result.stdout.decode() == ''
         assert result.stderr.decode() == 'Error\n'
         assert result.returncode != 0
-    print('Passed float as input')
+    print('Passed float as input\n')
 
 
 def test_args(ps_exe: Path):
