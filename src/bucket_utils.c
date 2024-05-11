@@ -6,13 +6,13 @@
 /*   By: lvan-gef <lvan-gef@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/05/16 13:42:53 by lvan-gef      #+#    #+#                 */
-/*   Updated: 2023/05/16 13:43:36 by lvan-gef      ########   odam.nl         */
+/*   Updated: 2024/05/06 03:32:37 by lvan-gef      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-void	move_to_b(t_node **head_a, t_node **head_b, int index, int middle)
+static	void	move_to_b(t_node **head_a, t_node **head_b, int index, int middle)
 {
 	if (index == 0)
 		pb(head_a, head_b);
