@@ -92,23 +92,16 @@ def test_sorting(ps_exe: Path, checker: Path, retry: int):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(prog='ps_test', description='A simple push swap tester for codam', epilog='Lets sort numbers')
-    parser.add_argument('ps', help='The path to the push swap executable')
+    parser.add_argument('ps', help='The path to the push swap executable', type=Path)
     parser.add_argument('-r', '--retry', type=int, default=100, help='How many times we retry a size. Is for dynamic sorting so we get a avg of the moves')
+    parser.add_argument('ch', help='The path to the checker of codam', type=Path)
     args = parser.parse_args()
 
-    cur_dir = Path.cwd()
-    codam_checkers_path = cur_dir.joinpath('checkers')
+    codam_checkers_bin = Path(args.ch)
     os_name = platform.system().lower()
-    if os_name == 'linux':
-        codam_checkers_bin = codam_checkers_path.joinpath('checker_linux')
-    elif os_name == 'darwin':
-        codam_checkers_bin = codam_checkers_path.joinpath('checker_Mac')
-    else:
-        print(f'Os: {os_name} is not supported', file=sys.stderr)
-        exit(1)
 
-    if not codam_checkers_path.exists():
-        print(f'Missing the checker provided by codam at this path: {codam_checkers_path}', file=sys.stderr)
+    if not codam_checkers_bin.exists():
+        print(f'Missing the checker provided by codam at this path: {codam_checkers_bin}', file=sys.stderr)
         exit(1)
 
     user_ps_path = Path(args.ps)
