@@ -8,21 +8,14 @@ import sys
 import subprocess
 import string
 
+INT_MAX = 2147483647
+INT_MIN = -2147483648
 
 def random_numbers(size: int) -> str:
     if size < 1:
         return ''
 
-    numbers = []
-    while len(numbers) != size:
-        nbr = random.randint(-2147483648, 2147483647)
-        if nbr not in numbers:
-            numbers.append(nbr)
-
-    if (size > 1):
-        while all(numbers[i] <= numbers[i + 1] for i in range(len(numbers) - 1)):
-            random.shuffle(numbers)
-
+    numbers = random.sample(range(INT_MIN, INT_MAX + 1), k=size)
     return ' '.join(str(nbr) for nbr in numbers)
 
 
@@ -87,6 +80,19 @@ def test_sorting(ps_exe: Path, checker: Path, retry: int):
             result = subprocess.run('cat moves.txt | wc -l', shell=True, capture_output=True)
             moves.append(int(result.stdout.decode()))
         print(f'min: {min(moves)}, avg: {sum(moves) // len(moves)}, max: {max(moves)}\n')
+
+    # numbers more then int MAX
+    print('Test numbers more then INT MAX')
+    nbrs = random.sample(range(-2147483648, INT_MAX + 1), k=100)
+    nbrs.append(INT_MAX + 1)
+    nbrs.append(INT_MAX + 12)
+    nbrs.append(INT_MAX + 42)
+    nbrs.append(INT_MIN - 1)
+    nbrs.append(INT_MIN - 12)
+    nbrs.append(INT_MIN - 42)
+    nbrs_str = ' '.join(str(nbr) for nbr in nbrs)
+    result = subprocess.run(f'ARG="{nbrs_str}"; {ps_exe} $ARG | tee moves.txt | {checker} $ARG', shell=True, capture_output=True)
+    assert(result.stdout.decode() == 'Error\n')
 
     subprocess.run('rm moves.txt', shell=True)
 
